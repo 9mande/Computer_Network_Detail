@@ -20,14 +20,14 @@ At this time, we need our first layer that sends or receives this signal and con
 Furthermore, physical layer may have fixed methods or rules about how to present or distinguish establish and terminate of the signals.  
 (In computer network, protocol means these fixed methods or rules.)  
 
-## Layer 2. Data Link Layer
+### Layer 2. Data Link Layer
 
 To send and receive the signals correctly at physical layer, data link layer may have 2 main functions.  
 
-First at this layer, we need a protocol that defines how to use the shared medium (now, a cable). Also, we need an address for each device connected in same network so that the data can arrive to a correct device in the network (now, PC B not PC C).  
-Second, this layer is responsible for ensuring that data is passed correctly. If there's an error detected from the data, it can retransmit. Also, it can control flow of transmission.  
+First at data link layer, we need a protocol that defines how to use the shared medium (now, a cable). Also, we need an address for each device connected in same network so that the data can arrive to a correct device in the network (now, PC B not PC C).  
+Second, data link layer is responsible for ensuring that data is passed correctly. If there's an error detected from the data, it can retransmit. Also, it can contain functions to control flow of transmission.  
 
-## Layer 3. Network Layer
+### Layer 3. Network Layer
 
 Let's enlarge the situation little bit like below.  
 ```bash
@@ -35,21 +35,19 @@ Let's enlarge the situation little bit like below.
 (PC C)──┴───────(Router)───────┴──(PC F)
 ```
 Now, if PC A wants to send data to PC D, PC A cannot just use address from layer 2 since PC D is in another LAN. (Maybe not impossible for this example, but for big network like Internet, it gets really hard to.)  
-So, at network layer, there's a individual logical, hierarchical address. With this address, the data can be transfered to any other PCs of any other LANs.  
+So, at the network layer, there's an individual logical, hierarchical address called IP assigned to each PC. It's called a host when a network node assigned a network address. With this address, the data can be transfered to any other PCs of any other LANs.  
+In other words, the network layer contains routing process which allows Internetworking.  
 
-## Layer 4. Transport Layer
+### Layer 4. Transport Layer
 
-## Layer 5. Session Layer
+Network layer was a layer that helps logical connection between hosts with logical address.
+Transport layer is, a layer that helps logical connection between applications of each host.
 
-## Layer 6. Presentation Layer
+A host may have several applications that uses network. To direct data to a specific application, a unique number is needed. This number is known as the port number. And each application's network end point (socket) is binded to the IP address and the port.
 
-## Layer 7. Application Layer
+### Layer 5. Session Layer
 
 
-## Breif Elements
-To be a little bit more specific, we have to consider some elements below.
-- Sender Software (Application or Service, like Email Service)
-- Sender PC
-- Physical connection between PCs (like a cable)
-- Receiver PC
-- Receiver Software
+### Layer 6. Presentation Layer
+
+### Layer 7. Application Layer
