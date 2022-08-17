@@ -1,2 +1,2 @@
 # Intro
-A collection of Really really detailed explanations of each content of Computer Network.
+A collection of really easy explanations of each content of Computer Network.
